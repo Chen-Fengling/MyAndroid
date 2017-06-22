@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.chenrun.myandroid.MainActivity">
+
+    <TextView
+        android:text="电话号码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tv_phoneNumber" />
+
+    <TextView
+        android:text="短信内容"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_phoneNumber"
+        android:layout_alignEnd="@+id/tv_phoneNumber"
+        android:layout_marginTop="26dp"
+        android:id="@+id/tv_messageBody" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="33dp"
+        android:id="@+id/et_phoneNumber"
+        android:hint="请输入电话号码"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/et_messageBody"
+        android:layout_below="@+id/et_phoneNumber"
+        android:layout_alignStart="@+id/et_phoneNumber"
+        android:hint="请输入短信内容"/>
+
+    <Button
+        android:text="拨打电话"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_callPhone"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/et_messageBody"
+        android:layout_toStartOf="@+id/et_messageBody"
+        android:onClick="callPhone"/>
+
+    <Button
+        android:text="发生短信"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bt_callPhone"
+        android:layout_alignEnd="@+id/et_messageBody"
+        android:layout_marginEnd="35dp"
+        android:id="@+id/bt_sendMessage" />
+</RelativeLayout>
